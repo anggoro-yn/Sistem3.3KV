@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 
 st.title('Perbandingan Tegangan') 
 
-options = ['21 Nov', '22 Nov']
+options = ['21 Nov', '22 Nov', '23 Nov']
 selected_option = st.selectbox('Pilih Tanggal', options)
 
 if selected_option == '21 Nov':
@@ -15,7 +15,9 @@ if selected_option == '21 Nov':
 elif selected_option == '22 Nov':
     df_path = 'LP10_20241122.csv'
     df2_path = 'GI_20241122a.csv'
-
+else:
+    df_path = 'LP10_20241123.csv'
+    df2_path = 'GI_20241123a.csv'    
 
 # Membaca dataset 3.3KV
 df = pd.read_csv(df_path, sep=';')
